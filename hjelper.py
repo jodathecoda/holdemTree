@@ -4,8 +4,7 @@ from tkinter import Toplevel, Label
 import re
 
 # Read and parse the file
-#file_path = 'C:\\Users\\mvelchev\\Learning\\gto\\flops_play.txt'
-file_path = 'C:\\Users\\mvelchev\\Learning\\holdemTree\\flops_play.txt'
+file_path = 'C:\\Users\\mvelchev\\Learning\\gto\\flops_play.txt'
 
 tabs_data = {}
 current_tab = None
@@ -43,14 +42,20 @@ for tab_name, lines in tabs_data.items():
     double_suited = tk.BooleanVar()
 
     double_suited_check = tk.Checkbutton(frame, text="Double Suited", variable=double_suited)
-    double_suited_check.grid(row=0, column=0, sticky='w', padx=5, pady=5)
+    double_suited_check.grid(row=0, column=0, columnspan=2, sticky='w', padx=5, pady=5)
 
-    for index, line in enumerate(lines, start=1):
+    # Arrange buttons in two columns with no more than 16 buttons per column
+    max_buttons_per_column = 16
+    num_columns = 2
+
+    for index, line in enumerate(lines):
+        row = (index % max_buttons_per_column) + 1  # +1 to account for the checkbox in the first row
+        col = index // max_buttons_per_column
         button = tk.Button(frame, text=line, command=lambda l=line, ds=double_suited: show_popup(l, ds.get()))
-        button.grid(row=index, column=0, sticky='ew', padx=5, pady=5)
+        button.grid(row=row, column=col, sticky='ew', padx=5, pady=5)
 
         # Configure grid to ensure all buttons have the same width
-        frame.grid_columnconfigure(0, weight=1)
+        frame.grid_columnconfigure(col, weight=1)
 
 # Configure root window to resize with content
 root.grid_rowconfigure(0, weight=1)
