@@ -4,7 +4,8 @@ from tkinter import Toplevel, Label
 import re
 
 # Read and parse the file
-file_path = 'C:\\Users\\mvelchev\\Learning\\gto\\flops_play.txt'
+#file_path = 'C:\\Users\\mvelchev\\Learning\\gto\\flops_play.txt'
+file_path = 'C:\\Users\\mvelchev\\Learning\\holdemTree\\flops_play.txt'
 
 tabs_data = {}
 current_tab = None
