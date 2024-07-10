@@ -71,7 +71,7 @@ TreeNode.row_count = 0
 # Main part of the program
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title("Poker Actions Tree Visualization")
+    root.title("Tree")
 
     tree_frame = tk.Frame(root)
     tree_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)

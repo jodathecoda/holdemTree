@@ -1,0 +1,13 @@
+
+
+op check - ip check - Turn1
+op check - ip bet 1 - op call - Turn2
+op check - ip bet 1 - op raise 3 - ip call - Turn3
+op check - ip bet 1 - op raise 3 - ip raise 7 - op call - Turn4
+op check - ip bet 1 - op raise 3 - ip raise 7 - op allin 16
+
+
+op bet 1 - ip call - Turn5
+op bet 1 - ip  raise 3 - op call - Turn6
+op bet 1 - ip  raise 3 - op raise 7 - ip call - Turn7
+op bet 1 - ip  raise 3 - op raise 7 - ip allin16
